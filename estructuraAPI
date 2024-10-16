@@ -1,0 +1,51 @@
+
+Recursos Principales:
+    Usuarios
+    Administradores
+    Perros
+    Formularios de Adopción
+    Formularios de Acogida
+    Donaciones
+    Informes
+Endpoints de la API:s
+    1. Usuarios:
+        GET /api/usuarios: Obtener la lista de usuarios.
+        POST /api/usuarios: Crear un nuevo usuario.
+        GET /api/usuarios/{id}: Obtener un usuario específico por ID.
+        PUT /api/usuarios/{id}: Actualizar información de un usuario específico.
+        DELETE /api/usuarios/{id}: Eliminar un usuario específico.
+    2. Administradores:
+        GET /api/administradores: Obtener la lista de administradores.
+        POST /api/administradores: Crear un nuevo administrador.
+        GET /api/administradores/{id}: Obtener un administrador específico por ID.
+        PUT /api/administradores/{id}: Actualizar información de un administrador específico.
+        DELETE /api/administradores/{id}: Eliminar un administrador específico.
+    3. Perros:
+        GET /api/perros: Obtener la lista de perros.
+        POST /api/perros: Añadir un nuevo perro.
+        GET /api/perros/{id}: Obtener un perro específico por ID.
+        PUT /api/perros/{id}: Actualizar información de un perro específico.
+        DELETE /api/perros/{id}: Eliminar un perro específico.
+    4. Formularios de Adopción:
+        GET /api/formularios-adopcion: Obtener la lista de formularios de adopción.
+        POST /api/formularios-adopcion: Enviar un nuevo formulario de adopción.
+        GET /api/formularios-adopcion/{id}: Obtener un formulario de adopción específico por ID.
+        PUT /api/formularios-adopcion/{id}: Actualizar un formulario de adopción específico.
+        DELETE /api/formularios-adopcion/{id}: Eliminar un formulario de adopción específico.
+    5. Formularios de Acogida:
+        GET /api/formularios-acogida: Obtener la lista de formularios de acogida.
+        POST /api/formularios-acogida: Enviar un nuevo formulario de acogida.
+        GET /api/formularios-acogida/{id}: Obtener un formulario de acogida específico por ID.
+        PUT /api/formularios-acogida/{id}: Actualizar un formulario de acogida específico.
+        DELETE /api/formularios-acogida/{id}: Eliminar un formulario de acogida específico.
+    6. Donaciones:
+        GET /api/donaciones: Obtener la lista de donaciones.
+        POST /api/donaciones: Registrar una nueva donación.
+        GET /api/donaciones/{id}: Obtener detalles de una donación específica por ID.
+        PUT /api/donaciones/{id}: Actualizar información de una donación específica.
+        DELETE /api/donaciones/{id}: Eliminar una donación específica.
+    7. Informes:
+        GET /api/informes: Obtener la lista de informes generados.
+        POST /api/informes: Crear un nuevo informe.
+        GET /api/informes/{id}: Obtener un informe específico por ID.
+        DELETE /api/informes/{id}: Eliminar un informe específico.
