@@ -13,18 +13,19 @@ CREATE TABLE usuarios (
     Borrado_Logico BOOLEAN DEFAULT FALSE -- Añadir campo de borrado lógico
 );
 
--- Tabla de Animales
 CREATE TABLE animales (
     ID_PERRO INT PRIMARY KEY AUTO_INCREMENT,
     Nombre VARCHAR(100) NOT NULL,
-    Tipo ENUM('perro', 'gato', 'hamster', 'otro') NOT NULL, -- Añadir campo tipo o familia
+    Tipo ENUM('perro', 'gato', 'hamster', 'otro') NOT NULL,
     Raza VARCHAR(100),
     Edad INT,
-    Peso DECIMAL(5, 2), -- Añadir campo peso
+    Peso DECIMAL(5, 2),
     Sexo ENUM('M', 'F'),
-    Estado VARCHAR(50), -- Ej: disponible, adoptado, en acogida
+    Estado VARCHAR(50),
     Fecha_Ingreso DATETIME DEFAULT CURRENT_TIMESTAMP,
-    Borrado_Logico BOOLEAN DEFAULT FALSE -- Añadir campo de borrado lógico
+    Incidencias_Medicas TEXT, -- Campo para incidencias médicas
+    ruta_img VARCHAR(255), -- Campo para la ruta de la imagen
+    Borrado_Logico BOOLEAN DEFAULT FALSE
 );
 
 -- Tabla de Solicitudes
@@ -46,5 +47,16 @@ CREATE TABLE donaciones (
     USUARIO_ID INT,
     Monto DECIMAL(10, 2) NOT NULL,
     Fecha_Donacion DATETIME DEFAULT CURRENT_TIMESTAMP,
+    FOREIGN KEY (USUARIO_ID) REFERENCES usuarios(ID_USUARIO)
+);
+
+CREATE TABLE historial_acogidas_adopciones (
+    ID_HISTORIAL INT PRIMARY KEY AUTO_INCREMENT,
+    ANIMAL_ID INT,
+    USUARIO_ID INT,
+    Fecha_Inicio DATE,
+    Fecha_Fin DATE,
+    Tipo ENUM('Adopción', 'Acogida') NOT NULL,
+    FOREIGN KEY (ANIMAL_ID) REFERENCES animales(ID_PERRO),
     FOREIGN KEY (USUARIO_ID) REFERENCES usuarios(ID_USUARIO)
 );
